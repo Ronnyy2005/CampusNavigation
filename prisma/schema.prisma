@@ -4,9 +4,14 @@ generator client {
 }
 
 datasource db {
+<<<<<<< HEAD
   provider  = "postgresql"
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
+=======
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+>>>>>>> origin/main
 }
 
 enum EdgeType {
@@ -31,12 +36,21 @@ model Node {
 }
 
 model Edge {
+<<<<<<< HEAD
   id            Int     @id @default(autoincrement())
   fromId        Int
   toId          Int
   from          Node    @relation("EdgesFrom", fields: [fromId], references: [id])
   to            Node    @relation("EdgesTo", fields: [toId], references: [id])
   type          String
+=======
+  id           Int     @id @default(autoincrement())
+  fromId       Int
+  toId         Int
+  from         Node    @relation("EdgesFrom", fields: [fromId], references: [id])
+  to           Node    @relation("EdgesTo", fields: [toId], references: [id])
+  type         String
+>>>>>>> origin/main
   bidirectional Boolean @default(true)
   accessible    Boolean @default(true)
   lengthMeters  Float
