@@ -3,6 +3,8 @@ import express from "express";
 import prismaPkg from "@prisma/client";
 const { PrismaClient } = prismaPkg;
 const prisma = new PrismaClient();
+const prisma = require('../lib/prisma'); // path as needed
+
 
 const router = express.Router();
 

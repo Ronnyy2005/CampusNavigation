@@ -4,14 +4,9 @@ generator client {
 }
 
 datasource db {
-<<<<<<< HEAD
   provider  = "postgresql"
   url       = env("DATABASE_URL")
   directUrl = env("DIRECT_URL")
-=======
-  provider = "mysql"
-  url      = env("DATABASE_URL")
->>>>>>> origin/main
 }
 
 enum EdgeType {

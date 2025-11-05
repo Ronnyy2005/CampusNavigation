@@ -3,6 +3,7 @@ import express from "express";
 import prismaPkg from "@prisma/client";
 const { PrismaClient } = prismaPkg;
 const prisma = new PrismaClient();
+const prisma = require('../lib/prisma'); // path as needed
 
 // Optional: keep your graph-based handler (walk-ll) if you still need it
 import { buildGraph } from "../services/DynamicGraphService.js";

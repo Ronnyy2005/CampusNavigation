@@ -8,9 +8,13 @@ import authRoutes from "./routes/auth.js";
 import nodesRoutes from "./routes/nodes.js";
 import edgesRoutes from "./routes/edges.js";
 import routeRoutes from "./routes/route.js";
+
 const express = require('express');
 const cors = require('cors');
 const app = express();
+
+const health = require('./routes/health');
+app.use('/api/health', health);
 
 app.use(cors());
 app.use(express.json());
